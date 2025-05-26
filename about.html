@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE STOP e-commerce</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Spartan', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            background-color: #f4f4f4;
+            color: #fff; /* White text */
+        }
+
+        h1, h2, h4, h6, p {
+            color: #fff; /* White text */
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 64px;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 46px;
+            line-height: 54px;
+            color: #222;
+        }
+
+        h4 {
+            font-size: 20px;
+            color:#222;
+        }
+
+        h6 {
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color:#465b52;
+            margin: 15px 0 20px 0;
+        }
+
+        .section-p1 {
+            padding: 40px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-m1 {
+            margin: 40px 0;
+        }
+
+        button.normal{
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background-color: #E3E6F3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            width: 100px; /* Adjusted logo size */
+            height: auto; /* Keep aspect ratio */
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            transition: 0.3s ease;
+        }
+
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: #088178;
+            border-bottom: 2px solid #088178;
+        }
+
+        #navbar li a.active::after,
+        #navbar li a:hover::after{
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+
+        #hero {
+            background-image: url("img/hero4.jpeg");
+            height: 90vh;
+            width: 100%;
+            background-size: cover;
+            background-position: top 25% right 0;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        #hero h4 {
+            padding-bottom: 15px;
+        }
+
+        #hero h1 {
+            color: #088178;
+        }
+
+        #hero button {
+            background-color: transparent;
+            color: #088178;
+            border: 0;
+            padding: 14px 80px 14px 65px;
+            background-repeat: no-repeat;
+            cursor: pointer; 
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #feature{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        #feature .fe-box {
+            width: 200px;
+            text-align: center;
+            padding: 25px 15px;
+            background: #fff;
+            box-shadow: 2px 20px 34px rgba(0, 0, 0, 0.03);
+            border: 1px solid #cce7d0;
+            border-radius: 4px;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+
+        #feature .fe-box:hover {
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+            transform: translateY(-5px);
+        }
+
+        #feature .fe-box img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        #feature .fe-box h6 {
+            display: inline-block;
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #fddde4;
+        }
+        
+        #product1{
+            text-align: center;
+        }
+
+        #product1 .pro-container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px; 
+        }
+
+        #product1 .pro{
+            width:23%;
+            min-width: 250px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            margin: 15px 0;
+            transition: 0.2s ease;
+            position: relative;
+        }
+
+        #product1 .pro:hover{
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        #product1 .pro img{
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        #product1 .pro .des{
+            text-align: start;
+            padding: 10px 0;
+        }
+
+        #product1 .pro .des span{
+            color: #606063;
+            font-size: 12px;
+        }
+
+        #product1 .pro .des h5{
+            padding-top: 7px;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        #product1 .pro .des i{
+            font-size: 12px;
+            color: rgb(243, 181, 25);
+        }
+
+        #product1 .pro .des h4{
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+
+        #product1 .pro .cart{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            background-color: #e8f6ea;
+            font-weight: 500;
+            color: #088178;
+            border: 1px solid #cce7d0;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            text-align: center;
+        }
+
+        #banner{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("img/banner/b2.jpeg");
+            width: 100%;
+            height: 40vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #banner h4{
+            color: #fff;
+            font-size: 16px;
+        }
+
+        #banner h2{
+            color: #fff;
+            font-size: 30px;
+            padding: 10px 0;
+        }
+
+        #banner h2 span{
+            color: #ef3636;
+        }
+
+        #banner button:hover{
+            background: #088178;
+            color: #fff;
+        }
+
+        #sm-banner{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #sm-banner .banner-box{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("img/banner/b17.jpeg");
+            min-width: 580px;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+        }
+
+        #sm-banner .banner-box2{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("img/banner/b18.jpeg");
+            min-width: 580px;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+        }
+
+        #sm-banner .banner-box3{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("img/banner/b19.jpeg");
+            min-width: 580px;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+        }
+
+        #sm-banner .banner-box4{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("img/banner/b20.jpeg");
+            min-width: 580px;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+        }
+
+        #newsletter{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url(img/banner/b14.jpeg);
+            background-repeat: no-repeat;
+            background-position: 20% 30%;
+            background-color: #041e42;
+        }
+
+        #newsletter h4{
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        #newsletter p{
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        #newsletter p span{
+            color: #ffbd27;
+        }
+
+        #newsletter .form{
+            display: flex;
+            width: 40%;
+        }
+
+        #newsletter input{
+            height: 3.125rem;
+            padding: 0 1.25rem;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        #newsletter button{
+            background-color: #088178;
+            color: #fff;
+            white-space: nowrap;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .col{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        footer .logo{
+            margin-bottom: 30px;
+        }
+
+        footer h4{
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+
+        footer p{
+            font-size: 13px;
+            margin: 0 0 8px 0;
+        }
+
+        footer a{
+            font-size: 13px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        footer .follow{
+            margin-top: 20px;
+        }
+
+        footer .follow i{
+            color: #465b52;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+
+        footer .install .row img{
+            border: 1px solid #088178;
+            border-radius: 6px;
+        }
+
+        footer .install img{
+            margin: 10px 0 15px 0;
+        }
+
+        footer .follow i:hover,
+        footer a:hover{
+            color: #088178;
+        }
+
+        footer .copyright{
+            width: 100%;
+            text-align: center;
+        }
+
+        #page-header{
+            background-image: url("img/banner/b1.jpeg");
+            width: 100%;
+            height: 40vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            text-align:center;
+            flex-direction: column; 
+            padding: 14px;
+        }
+
+        #page-header h2,
+        #page-header p{
+            color: #080000;
+        }
+
+        #pagination{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pagination a{
+            text-decoration: none;
+            background-color: #088178;
+            padding: 15px 20px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 600;
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        #pagination a i{
+            font-size: 16px;
+            font-weight: 600;
+        } 
+
+        #page-header.blog-header{
+            background-image: url("img/banner/b22.jpeg");
+        }
+
+        #blog{
+            padding: 150px 150px 0 150px;
+        }
+
+        #blog .blog-box{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            padding-bottom: 90px;
+        }
+
+        #blog .blog-img{
+            width: 50%;
+            margin-right: 40px;
+        }
+
+        #blog .img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        #blog .blog-details{
+            width: 50%;
+        }
+
+        #blog .blog-details a{
+            text-decoration: none;
+            font-size: 11px;
+            color: #000;
+            font-weight: 700;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        #blog .blog-details a::after{
+            content: "";
+            width: 50px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            top: 4px;
+            right: -60px;
+        }
+
+        #blog .blog-details a:hover{
+            color: #088178;
+        }
+
+        #blog .blog-details a:hover:after{
+            background-color: #088178;
+        }
+
+        #blog .blog-box h1{
+            position: absolute;
+            top: -40px;
+            left: 0;
+            font-size: 70px;
+            font-weight: 700;
+            color: #c9cbce;
+            z-index: -9;
+        }
+
+        #page-header.about-header{
+            background-image: url(img/about/a3.jpeg);
+        }
+
+        abbr {
+        color: black;
+        }
+
+        #about-head{
+            display: flex;
+            align-items: center;
+        }
+
+        #about-head img{
+            width: 50%;
+            height: auto;
+        }
+
+        #about-head div{
+            padding-left: 40px;
+        }
+
+        .login-button {
+            background-color: transparent;
+            color: #088178;
+            border: 1px solid #088178;
+            padding: 12px 30px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 5px;
+            text-align: center;
+            width: 180px;
+            height: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .login-button:hover {
+            background-color:#cbcbdc;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 799px) {
+            #header, .section-p1 {
+                padding: 20px;
+            }
+
+            #hero {
+                height: 70vh;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#KnowUs</h2>
+        <p>Get to know about us more..</p>
+    </section>
+
+    <section id="about-head" class="section-p1">
+        <img src="img/about/a2.jpeg" alt="">
+        <div>
+            <h2>Wo We Are?</h2>
+            <p>Welcome to ONESTOP, your trusted destination for "fashion," "electronics," etc. Founded with the vision to offer the finest quality and trendsetting products, we are committed to bringing you a seamless shopping experience, combining convenience, value, and customer service. At ONESTOP, we believe that shopping should be enjoyable, so we curate only the best items that suit your lifestyle needs. Whether you're looking for the latest trends, exclusive deals, or everyday essentials, we’ve got you covered. Our user-friendly platform allows you to browse our wide collection from the comfort of your home, while our secure payment gateways and fast delivery ensure you receive your orders quickly and safely. We are passionate about quality and service, and that’s why we are dedicated to exceeding your expectations at every step of your shopping journey. Thank you for choosing ONESTOP — your satisfaction is our priority.</p>
+            <abbr title="">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes.</abbr>
+            <br><br>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes.
+            </marquee>
+        </div>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="img/features/f1.jpeg" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f2.jpeg" alt="">
+            <h6>24/7 Support</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/features/f3.jpeg" alt="">
+            <h6>Save Money</h6>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span>.
+            </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/logo.png" class="logo" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> Sharda University, Knowledge Park 3, Gr. Noida</p>
+            <p><strong>Phone:</strong> +91 7505500519 / +91 9001796551</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy & Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My WishList</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpeg" alt="">
+                <img src="img/pay/play.jpeg" alt="">
+            </div>
+            <p>Secured Payment Getways</p>
+            <img src="img/pay/pay.jpeg" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>2024, AditiRishika etc - HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

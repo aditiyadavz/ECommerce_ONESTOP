@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+        <style>
+            /* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure body takes the full height of the window */
+    background-image: url('img/your-image.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Make sure the image covers the whole screen */
+    background-position: center; /* Keep the image centered */
+    background-attachment: fixed; /* Ensure the image stays in place while scrolling */
+    background-repeat: no-repeat;
+}
+
+/* Login page container */
+#login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("img/login.jpeg");
+}
+
+/* Login form container */
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px; /* Increased value for more curvy edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 2; 
+}
+
+/* Heading styling */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.input-field {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-field label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded input fields */
+    box-sizing: border-box;
+}
+
+.input-field input:focus {
+    border-color: #088178;
+    outline: none;
+}
+
+/* Login button styling */
+.login-button {
+    background-color: #088178;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #065f56;
+}
+
+/* Register link */
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link p {
+    font-size: 14px;
+    color: #555;
+}
+
+.register-link a {
+    color: #088178;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+        </style>
+    </head>
+    <body>
+        <section id="login-page">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form>
+                    <div class="input-field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <!-- Use an anchor tag for redirecting instead of form submission -->
+                    <div class="submit-btn">
+                        <a href="index.html" class="login-button">Login</a>
+                    </div>
+                </form>
+                <div class="register-link">
+                    <p>Don't have an account? <a href="register.html">Sign up</a></p>
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>
