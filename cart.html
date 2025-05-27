@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONE STOP e-commerce</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -452,6 +452,14 @@
             justify-content: space-between;
         }
 
+        .section-p1{
+            display: wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 30px;
+        }
+
         footer .col{
             display: flex;
             flex-direction: column;
@@ -787,13 +795,15 @@
         #cart-add{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: row;
             gap: 20px;
         }
 
         #coupon{
-            width: 50px;
+            width: 200px;
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
         }
 
         #coupon h3,
@@ -804,8 +814,9 @@
         #coupon input{
             padding: 10px 20px;
             outline: none;
-            width: 60%;
+            width: 180px;
             margin-right: 10px;
+            margin-bottom: 10px;
             border: 1px solid #e2e9e1;
         }
 
@@ -814,6 +825,7 @@
             background-color: #088178;
             color: #fff;
             padding: 12px 20px;
+            width: 180px;
         }
 
         #subtotal{
@@ -968,7 +980,19 @@
         </div>
     </section>
 
-    <footer class="section-p1">
+    <section id="newsletter" class="section-p1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span>.
+            </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="fsection-p1">
         <div class="col">
             <img src="img/logo.png" class="logo" alt="">
             <h4>Contact</h4>
