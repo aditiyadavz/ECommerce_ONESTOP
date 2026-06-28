@@ -9,32 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <section id="header">
         <div class="logoName">
-        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+            <a href="index.html"><img src="img/logo.png" class="logo" alt="ONE STOP"></a>
         </div>
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search..." />
-            <button type="submit" id="searchButton"><i class="fas fa-search"></i></button>
+            <input type="text" id="searchInput" placeholder="Search products..." />
+            <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
         </div>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html" class="login-button">Login</a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li>
+                    <a href="cart.html" class="cart-icon-wrap">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </a>
+                </li>
             </ul>
         </div>
+        <i class="fas fa-bars" id="bar"></i>
     </section>
 
     <section id="hero">
         <h4>Trade-in Offer</h4>
         <h2>Super Value Deals</h2>
         <h1>On All Products</h1>
-        <p>Save more with coupons & up to 70% off!</p>
+        <p>Save more with coupons &amp; up to 70% off!</p>
         <a href="shop.html">
             <button class="normal">Shop Now</button>
         </a>
@@ -42,150 +49,154 @@
 
     <section id="feature" class="section-p1">
         <div class="fe-box">
-            <img src="img/features/f1.jpeg" alt="">
+            <img src="img/features/f1.jpeg" alt="Free Shipping">
             <h6>Free Shipping</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f2.jpeg" alt="">
+            <img src="img/features/f2.jpeg" alt="24/7 Support">
             <h6>24/7 Support</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f3.jpeg" alt="">
+            <img src="img/features/f3.jpeg" alt="Save Money">
             <h6>Save Money</h6>
         </div>
+        <div class="fe-box">
+            <img src="img/features/f4.jpeg" alt="Secure Payment">
+            <h6>Secure Payment</h6>
+        </div>
     </section>
-    
+
     <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p>Collection New Modern Design</p>
         <div class="pro-container">
-            <div class="pro">
-                <img src="img/products/f1.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f1.jpeg" alt="Sea Blue Shirt">
                 <div class="des">
-                    <span>adidas</span>
+                    <span>Adidas</span>
                     <h5>Sea Blue Shirt</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.499</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Sea Blue Shirt',499,'img/products/f1.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f21.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f21.jpeg" alt="White Sneakers">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>Adidas</span>
+                    <h5>White Sneakers</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.1999</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'White Sneakers',1999,'img/products/f21.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f22.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f22.jpeg" alt="Baggy Wear">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>Levi's</span>
+                    <h5>Baggy Wear</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.999</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Baggy Wear',999,'img/products/f22.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f23.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f23.jpeg" alt="Claw Clips">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>Baggit</span>
+                    <h5>Claw Clips</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.200</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Claw Clips',200,'img/products/f23.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f24.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f24.jpeg" alt="Noise Buds VS104">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>Noise</span>
+                    <h5>Noise Buds VS104</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.1299</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Noise Buds VS104',1299,'img/products/f24.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f25.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f25.jpeg" alt="Smart Watch">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>RealMe</span>
+                    <h5>Smart Watch</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.2999</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Smart Watch',2999,'img/products/f25.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f17.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f17.jpeg" alt="Polo Shirt">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>Levi's</span>
+                    <h5>Polo Shirt</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.1500</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Polo Shirt',1500,'img/products/f17.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
-            <div class="pro">
-                <img src="img/products/f26.jpeg" alt="">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/f26.jpeg" alt="Satin Shirt">
                 <div class="des">
-                    <span>adidas</span>
-                    <h5>Sea Blue Shirt</h5>
+                    <span>H&amp;M</span>
+                    <h5>Satin Shirt</h5>
                     <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>Rs.999</h4>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                <a href="#" onclick="addToCart(event,'Satin Shirt',999,'img/products/f26.jpeg')">
+                    <i class="fas fa-shopping-cart cart"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -193,58 +204,73 @@
     <section id="banner" class="section-m1">
         <h4>Repair Services</h4>
         <h2>Up to <span>70% OFF</span> - All t-shirts and Accessories</h2>
-        <button class="normal">Explore More</button>
+        <a href="shop.html"><button class="normal">Explore More</button></a>
     </section>
 
     <section id="sm-banner" class="section-p1">
-        <div class="banner-box"></div>
-        <div class="banner-box banner-box2"></div>
-        <div class="banner-box banner-box3"></div>
-        <div class="banner-box banner-box4"></div>
+        <div class="banner-box">
+            <h4>Crazy deals</h4>
+            <h2>Buy 1 Get 1 Free</h2>
+            <a href="shop.html">Learn More →</a>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>Summer sale</h4>
+            <h2>New Collection</h2>
+            <a href="shop.html">Shop Now →</a>
+        </div>
+        <div class="banner-box banner-box3">
+            <h4>Men's Style</h4>
+            <h2>New Arrivals</h2>
+            <a href="shop.html">Explore →</a>
+        </div>
+        <div class="banner-box banner-box4">
+            <h4>Accessories</h4>
+            <h2>New Collection</h2>
+            <a href="shop.html">View All →</a>
+        </div>
     </section>
 
     <section id="newsletter" class="section-p1">
         <div class="newstext">
             <h4>Sign Up For Newsletter</h4>
-            <p>Get E-mail updates about our latest shop and <span>special offers</span>.
-            </p>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span>.</p>
         </div>
         <div class="form">
-            <input type="text" placeholder="Your email address">
+            <input type="email" placeholder="Your email address">
             <button class="normal">Sign Up</button>
         </div>
     </section>
 
     <footer class="fsection-p1">
         <div class="col">
-            <img src="img/logo.png" class="logo" alt="">
+            <img src="img/logo.png" class="logo" alt="ONE STOP">
             <h4>Contact</h4>
-            <p><strong>Address: </strong> Sharda University, Knowledge Park 3, Gr. Noida</p>
+            <p><strong>Address:</strong> Sharda University, Knowledge Park 3, Gr. Noida</p>
             <p><strong>Phone:</strong> +91 7505500519 / +91 9001796551</p>
             <p><strong>Hours:</strong> 10:00 - 18:00, Mon-Sat</p>
             <div class="follow">
                 <h4>Follow Us</h4>
                 <div class="icon">
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
                 </div>
             </div>
         </div>
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
+            <a href="about.html">About Us</a>
             <a href="#">Delivery Information</a>
-            <a href="#">Privacy & Policy</a>
-            <a href="#">Terms & Condition</a>
-            <a href="#">Contact Us</a>
+            <a href="#">Privacy &amp; Policy</a>
+            <a href="#">Terms &amp; Condition</a>
+            <a href="contact.html">Contact Us</a>
         </div>
         <div class="col">
             <h4>My Account</h4>
-            <a href="#">Sign In</a>
-            <a href="#">View Cart</a>
+            <a href="login.html">Sign In</a>
+            <a href="cart.html">View Cart</a>
             <a href="#">My WishList</a>
             <a href="#">Track My Order</a>
             <a href="#">Help</a>
@@ -253,18 +279,18 @@
             <h4>Install App</h4>
             <p>From App Store or Google Play</p>
             <div class="row">
-                <img src="img/pay/app.jpeg" alt="">
-                <img src="img/pay/play.jpeg" alt="">
+                <img src="img/pay/app.jpeg" alt="App Store">
+                <img src="img/pay/play.jpeg" alt="Google Play">
             </div>
-            <p>Secured Payment Getways</p>
-            <img src="img/pay/pay.jpeg" alt="">
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.jpeg" alt="Payment methods">
         </div>
-
         <div class="copyright">
-            <p>2024, AditiRishika etc - HTML CSS Ecommerce Template</p>
+            <p>© 2024 ONE STOP — All Rights Reserved</p>
         </div>
     </footer>
-    
+
+    <div id="toast-container"></div>
     <script src="script.js"></script>
 </body>
 </html>
